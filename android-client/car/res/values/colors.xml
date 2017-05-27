@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- mian -->
+    <color name="car_cl_unchoose">#595959</color>
+    <color name="car_cl_choose">#FF6000</color>
+
+    <!-- news -->
+    <color name="news_cl_unchoose">#7E7E7E</color>
+    <color name="news_cl_choose">#FF6000</color>
+    <color name="news_head_cl_choose">#C8E7B496</color>
+    <color name="news_head_cl_unchoose">#00000000</color>
+
+    <!-- find -->
+    <color name="find_cl_unchoose">#FF6000</color>
+    <color name="find_cl_choose">#FFFFFF</color>
+    <color name="sidebar_cl">#515151</color>
+    
+     <color name="default_circle_indicator_fill_color">#FFFFFFFF</color>
+    <color name="default_circle_indicator_page_color">#00000000</color>
+    <color name="default_circle_indicator_stroke_color">#FFDDDDDD</color>
+    
+     <color name="normal_bg_color">#66E0DFE0</color>
+    <color name="white">#FFFFFF</color>
+    <color name="normal_orange_color">#FF6633</color>
+    <color name="gray">#696969</color>
+    <color name="location_city_bg">#e1e1e0</color>
+    <color name="title_color">#FF6000</color>
+    <color name="black">#000000</color>
+    <color name="backgroud">#EDEDEB</color>
+    
+
+</resources>

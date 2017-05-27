@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/fragment_find_brand_listview_head" />
+
+    <LinearLayout
+        android:id="@+id/list_item_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/list_item_content_logo"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/list_item_content_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textColor="#515151"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

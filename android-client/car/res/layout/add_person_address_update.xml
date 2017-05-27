@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud"
+    android:orientation="vertical" >
+
+    <!-- 顶部 -->
+
+    <LinearLayout
+        android:id="@+id/car_address_update_l"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bg_n"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/address_update_goback"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_activate_bg"
+            android:drawableLeft="@drawable/back"
+            android:gravity="center_vertical"
+            android:text="@string/address_person_update"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/address_add_goback"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_activate_bg"
+            android:drawableLeft="@drawable/back"
+            android:gravity="center_vertical"
+            android:text="@string/address_add_goback"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/btn_addres_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/address_delete"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/address_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="@string/address_contacts"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t3" />
+
+        <EditText
+            android:id="@+id/address_name"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.59"
+            android:background="@null"
+            android:hint="输入姓名"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/address_sex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/address_boy_girl_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-12dp"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.45"
+                android:button="@drawable/address_sex_radiobtn"
+                android:checked="true"
+                android:text="男"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="38dp"
+                android:button="@drawable/address_sex_radiobtn"
+                android:text="女"
+                android:textColor="@color/black" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/address_contracts_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/contracts_phone"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t3" />
+
+        <EditText
+            android:id="@+id/address_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入电话"
+            android:inputType="phone"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/address_show_hidden" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/address_contracts_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/prepare_phone"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t3" />
+
+        <EditText
+            android:id="@+id/prepare_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入备用电话"
+            android:inputType="phone"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t1"
+            android:visibility="visible" />
+    </LinearLayout>
+
+        <LinearLayout
+        android:id="@+id/choosecitylayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/choosecity"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t3" />
+
+        <EditText
+            android:id="@+id/get_address_city_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/city_location"
+            android:textSize="@dimen/t1" />
+        <TextView 
+            android:id="@+id/choose_location_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"
+            android:drawableLeft="@drawable/address_location"
+            android:layout_marginRight="20dp"
+            android:textSize="@dimen/t3"/>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/address_contracts_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/detail_address"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t3" />
+
+        <EditText
+            android:id="@+id/address_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="详细地址"
+            android:textSize="@dimen/t1" />
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/confirm_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_layout"
+        android:layout_margin="@dimen/normal_space"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/my_btn_bg_color"
+        android:padding="@dimen/little_space"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_defalut" />
+
+</LinearLayout>

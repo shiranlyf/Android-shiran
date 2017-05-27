@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="5dp">
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="温馨提示"
+        android:textColor="#000000"
+        android:textSize="17sp"/>
+    <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_detail_divider"/>
+    <WebView 
+        android:id="@+id/wv_gn_warm_prompt"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"/>
+
+</LinearLayout>
+<!-- 
+  WebView的使用方法：
+         在使用WebView之前，要在AndroidManifest.xml中添加 如下权限
+   <uses-permission android:name="android.permission.INTERNET">
+   </uses-permission>
+        否则会出Web page not available错误
+ -->

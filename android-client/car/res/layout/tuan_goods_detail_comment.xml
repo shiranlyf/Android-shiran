@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="5dp">
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="评论"
+            android:textColor="#000000"
+            android:textSize="17dp"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.2"
+            android:textColor="@color/normal_orange_color"
+            android:textSize="17sp"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分"
+            android:textColor="#cccccc"
+            android:textSize="10sp"/>
+    </LinearLayout>
+    <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_detail_divider"/>
+      <!-- 给listView设置隐藏属性   有评论的时候才进行显示  -->
+    <ListView 
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:visibility="gone">
+    </ListView>
+    <!-- 当有评论的时候讲再无评论隐藏   没有的时候讲再无评论进行显示 -->
+   <TextView 
+       android:id="@+id/tv_plts"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:padding="10.0dip"
+       android:text="暂无评论"
+       android:textColor="#ffa5cba2"
+       android:textSize="16.0sp"/>
+   <ImageView 
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:scaleType="fitXY"
+       android:src="@drawable/ic_detail_divider"/>
+   <!-- 设置隐藏属性   默认为隐藏状态   有评论才进行显示-->
+   <TextView 
+       android:id="@+id/tv_more"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+       android:padding="10.0dip"
+       android:text="查看全部评价(20)条"
+       android:textColor="@color/normal_orange_color"
+       android:visibility="gone"
+       android:textSize="16.0sp"/>
+</LinearLayout>
+<!--  android:scaleType属性的用法 -
+   1、fitXY:把图片按照指定的大小在View中显示，拉伸显示图片，不保持原比例，填满View
+   2、center：以原图的几何中心点和ImagView的几何中心点为基准,
+               按图片的原来size居中显示，不缩放，当图片长/宽超过View的长/宽，
+               则截取图片的居中部分显示ImageView的size.当图片小于View 的长宽时，
+               只显示图片的size,不剪裁
+   3、centerCrop：以原图的几何中心点和ImagView的几何中心点为基准,
+               按比例扩大(图片小于View的宽时)图片的size居中显示，使得图片长 (宽)等于
+               或大于View的长(宽),并按View的大小截取图片。当原图的size大于ImageView时，
+               按比例缩小图片，使得长宽中有一向等于ImageView,另一向大于ImageView。实际上，
+               使得原图的size大于等于ImageView
+   4、fitStart:把图片按比例扩大(缩小)到View的宽度，显示在View的上部分位置
+   5、matrix：用matrix来绘制
+   6、fitCenter:把图片按比例扩大(缩小)到View的宽度，居中显示
+-->

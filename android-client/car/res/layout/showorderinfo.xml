@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+    
+    
+    <!-- 顶部 -->
+
+    <LinearLayout
+        android:id="@+id/car_address_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bg_n"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/car_order_goback"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_activate_bg"
+            android:drawableLeft="@drawable/back"
+            android:gravity="center_vertical"
+            android:text="@string/my_all_order"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+    
+    <!-- 中间的部分 -->
+    <ListView
+        android:id="@+id/all_order_show"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical" >
+    </ListView>
+    
+
+</LinearLayout>

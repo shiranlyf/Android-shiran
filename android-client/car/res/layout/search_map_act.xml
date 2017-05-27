@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:orientation="horizontal" 
+        android:background="@color/normal_orange_color">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/normal_space"
+            android:text="@string/fragent_find_search"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <com.amap.api.maps.MapView
+            android:id="@+id/search_mymap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.amap.api.maps.MapView>
+
+        <ImageView
+            android:id="@+id/search_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#88666666"
+            android:contentDescription="@null"
+            android:padding="10dp"
+            android:src="@drawable/back" />
+
+        <ImageView
+            android:id="@+id/search_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:background="#88666666"
+            android:contentDescription="@null"
+            android:paddingBottom="7dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="8dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/map_refresh" />
+    </RelativeLayout>
+
+</LinearLayout>

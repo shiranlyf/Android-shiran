@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#F6F6F6"
+        android:orientation="vertical" >
+        <!-- 带选区对应的上下线条 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EBEBEB" />
+
+        <HorizontalScrollView
+            android:id="@+id/find_filter_hscv_choosed"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fadingEdge="none"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/find_filter_llyt_choosed"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+                <!-- 在这里面加选择项 -->
+            </LinearLayout>
+        </HorizontalScrollView>
+        <!-- 带选区对应的上下线条 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EBEBEB" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/find_filter_tv_price"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/find_str_price"
+                    android:textColor="#454545"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/find_filter_tv_level"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/find_str_level"
+                    android:textColor="#454545"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/find_filter_tv_pai"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/find_str_pai"
+                    android:textColor="#454545"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/find_filter_tv_bian"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/find_str_bian"
+                    android:textColor="#454545"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!-- 对应带选区下面的线 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EBEBEB" >
+             
+                <ImageView
+                    android:id="@+id/find_filter_iv_cursor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="matrix"
+                    android:src="@drawable/fragment_find_filter_ic_select" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/find_filter_vp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#F6F6F6"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EBEBEB" />
+
+        <!-- 触发服务器请求的按钮 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center" >
+          
+            <Button
+                android:id="@+id/fragment_find_filter_btn_result"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#FF6000"
+                android:clickable="false"
+                android:text="请选择筛选条件"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EBEBEB" />
+    </LinearLayout>
+
+</LinearLayout>

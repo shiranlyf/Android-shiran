@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/address_listview_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:layout_marginTop="7dp"
+        android:background="@color/white">
+         
+
+        <LinearLayout
+            android:id="@+id/address_info_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" 
+             android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/address_info_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/address_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="罗永富"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/is_boy_girl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="先生"
+                    android:paddingLeft="4dp"
+                    android:textColor="@color/black"/>
+                <TextView 
+                    android:id="@+id/address_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="13117532652"
+                    android:paddingLeft="10dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+            <TextView android:id="@+id/order_detail_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="湖南工业大学(新校区)四栋515"
+                android:textColor="@color/gray"
+                android:textSize="11sp"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"/>
+        </LinearLayout>
+        <ImageView  android:id="@+id/address_update_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/car_address_update"
+            android:layout_gravity="center_vertical"
+            android:paddingRight="10dp"
+            android:clickable="true"/>
+    </LinearLayout>
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>
