@@ -13,7 +13,7 @@ import com.car.entity.Order;
  * @author shiran 
  *
  */
-public class SellerManageAdapter extends SimpleBaseAdapter<Order>{
+public class SellerManageAdapter extends  SimpleBaseAdapter<Order>{
 
 	public SellerManageAdapter(Context c, List<Order> datas) {
 		super(c, datas);
@@ -25,5 +25,4 @@ public class SellerManageAdapter extends SimpleBaseAdapter<Order>{
 		// TODO Auto-generated method stub
 		return null;
 	}
-
 }

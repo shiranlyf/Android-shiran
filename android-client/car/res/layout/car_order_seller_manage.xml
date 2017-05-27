@@ -6,9 +6,8 @@
     android:orientation="vertical" >
 
     <!-- 顶部 -->
-
     <LinearLayout
-        android:id="@+id/car_address_list"
+        android:id="@+id/car_address_list_manage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/top_bg_n"
@@ -22,8 +21,8 @@
             android:layout_weight="1"
             android:background="@drawable/btn_activate_bg"
             android:drawableLeft="@drawable/back"
-            android:gravity="center_vertical"
-            android:text="@string/person_order_address"
+            android:gravity="center_vertical" 
+            android:text="销售管理"   
             android:textColor="@color/white"
             android:textSize="18sp" />
     </LinearLayout>
@@ -33,29 +32,39 @@
     <LinearLayout
         android:id="@+id/order_seller_manage_time"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/white"
-        android:orientation="horizontal" >
-
-        <DatePicker
-            android:id="@+id/datepickerstart"
-            android:layout_width="150dip"
-            android:layout_height="wrap_content"
-            android:calendarViewShown="false" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:gravity="center_vertical"
-            android:text="至" />
-
-        <!--  这个是时间插件-->
-        <DatePicker
-            android:id="@+id/datepickerend"
-            android:layout_width="150dip"
-            android:layout_height="wrap_content"
-            android:calendarViewShown="false" />
+        android:orientation="horizontal" 
+        android:layout_marginTop="10px">
         
+        <EditText 
+            android:id="@+id/inputDate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:text="0000-00-00 - 0000-00-00"
+            android:inputType="none"
+            android:layout_weight="1"
+            android:background="@null"/>
+        <EditText 
+            android:id="@+id/goods_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@null"
+            android:singleLine="true"
+            android:hint="商品或用户搜索..."
+            android:textSize="12sp"/>
+        
+        <Button 
+            android:id="@+id/submit_order_manage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提交"
+            android:background="@color/white"
+            android:textSize="16sp"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"/>
     </LinearLayout>
 
     <!-- 中间部分订单列表 -->

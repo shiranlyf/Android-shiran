@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
+    <string name="startDateTime">开始日期时间</string>
+    <string name="endDateTime">结束日期时间</string>
     <string name="my_all_order">我的订单</string>
     <string name="choose_order">确认订单</string>
     <string name="shopping_cart">购物车</string>

@@ -94,6 +94,7 @@ public class SelfFragment extends BaseFragment implements OnClickListener
 		case R.id.my_index_item_order:
 			Intent  orderIntent = new Intent(getActivity(), ShowOrderInfo.class);
 			startActivity(orderIntent);
+			break;
 		case R.id.my_index_item_seller_order_management:
 			sellerOrderManagement();
 			break;
@@ -109,11 +110,11 @@ public class SelfFragment extends BaseFragment implements OnClickListener
 		 //ToastMaker.showShortToast("=============" + userName);
 		 if (userName != null && !userName.equals("点击登录")) {
 			 if (userName == "admin" || userName.equals("admin")) {
-				Intent intent = new Intent(getActivity(), SellerManageActivity.class);
-				startActivity(intent);
+				//ToastMaker.showShortToast("=-------进行页面的跳转");
+				Intent  manageIntent = new Intent(getActivity(), SellerManageActivity.class);
+				startActivity(manageIntent);
 			 }else {
 				 ToastMaker.showShortToast("没有权限进行管理！");
-				 return;
 			}
 		 }else {
 			ToastMaker.showShortToast("没有进行登录！");

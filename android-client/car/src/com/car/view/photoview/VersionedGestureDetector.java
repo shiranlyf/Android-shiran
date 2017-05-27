@@ -2,6 +2,7 @@ package com.car.view.photoview;
 
 /*******************************************************************************
  * Copyright 2011, 2012 Chris Banes.
+
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +18,6 @@ package com.car.view.photoview;
  *******************************************************************************/
 
 import android.content.Context;
-
 import android.os.Build;
 
 public final class VersionedGestureDetector {

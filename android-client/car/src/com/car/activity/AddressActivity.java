@@ -42,7 +42,6 @@ public class AddressActivity extends BaseActivity {
 	@ViewInject(R.id.btn_add_order_address)
 	private TextView  btn_add_order_address;
 	
-
 	@Override
 	protected int getLayoutId() {
 		// TODO Auto-generated method stub
@@ -60,7 +59,7 @@ public class AddressActivity extends BaseActivity {
 		case R.id.car_address_goback:
 			finish();
 			break;
-
+			
 		case R.id.btn_add_order_address:
 		    //跳转到添加页面
 			Intent  intent = new Intent(AddressActivity.this, AddressUpdateActivity.class);

@@ -1,7 +1,6 @@
 package com.car.http;
 
 import java.io.File;
-
 import android.os.Handler;
 
 import com.car.application.LocalApplication;

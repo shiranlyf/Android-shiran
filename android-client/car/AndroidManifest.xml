@@ -5,8 +5,8 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="18" />
+        android:minSdkVersion="11"
+        android:targetSdkVersion="20" />
     
     <!-- gps定位的权限 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
@@ -176,6 +176,12 @@
         <!-- 订单查询也面的是展示 -->
         <activity 
             android:name="com.car.activity.ShowOrderInfo"
+            android:label="@string/app_name">
+        </activity>
+        
+        <!-- 销售管理 -->
+        <activity 
+            android:name="com.car.activity.SellerManageActivity"
             android:label="@string/app_name">
         </activity>
         
