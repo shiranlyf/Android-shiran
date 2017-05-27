@@ -2,6 +2,7 @@ package com.car.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -34,7 +35,31 @@ public class OrderServlet extends HttpServlet {
 			getOrderByfenye(request, response);
 		}
 		
+		//进行销售管理模块代码的编写
+		if ("getAllManageOrder".equals(method)) {
+			getAllManageOrder(request, response);
+		}
 		
+		
+	}
+
+	/**
+	 * 销售管理模块代码的编写
+	 * @param request
+	 * @param response
+	 * @throws IOException 
+	 */
+	private void getAllManageOrder(HttpServletRequest request,
+			HttpServletResponse response) throws IOException {
+		request.setCharacterEncoding("utf-8");
+		response.setContentType("text/html;charset=utf-8");
+		PrintWriter  out = response.getWriter();
+		String time = new String(request.getParameter("time").getBytes("ISO-8859-1"), "utf-8");
+		String goodNameOrUser = request.getParameter("goodNameOrUser");
+		String goodsManageList = orderService.getAllManageOrderJson(time, goodNameOrUser);
+	    out.print(goodsManageList);
+	    out.close();
+	    out.flush();
 	}
 
 	/**

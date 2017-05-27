@@ -90,7 +90,7 @@ public class AddressService {
 		int uid = 0;
 		Address  address = new Address();
 		
-		User  user = (User) userDAO.findByName(uname);
+		User  user = (User) userDAO.findByName(uname).get(0);
 		address.setUser(user);
 		//System.out.println("--------" + user.getName());
 		address.setAddressName(addressNameValue);

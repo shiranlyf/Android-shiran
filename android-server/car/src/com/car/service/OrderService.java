@@ -1,5 +1,6 @@
 package com.car.service;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -14,6 +15,7 @@ import com.car.entity.Newsimportant;
 import com.car.entity.Order;
 import com.car.entity.ResponseObject;
 import com.car.entity.User;
+import com.car.util.ChinaDateToDateUtil;
 import com.car.util.StringUtil;
 import com.google.gson.GsonBuilder;
 
@@ -83,7 +85,7 @@ public class OrderService {
 		List<User> userList = userDAO.findByName(username);
 		User user = userList.get(0);
 		int uid = user.getUid();
-		String uniquHql = "select count(*) from Order ";
+		String uniquHql = "select count(*)  from Order where userId = '"+uid+"' ";
 		String sumStr = orderDAO.getSession().createQuery(uniquHql)
 				.uniqueResult().toString();
 		int sum = Integer.parseInt(sumStr);
@@ -94,7 +96,7 @@ public class OrderService {
 		if (size > count) {
 			page = count;
 		}
-		String orderHql = "from Order order by orderTime desc ";
+		String orderHql = "from Order where userId = '"+uid+"' order by orderTime desc ";
 		Query orderQuery = orderDAO.getSession().createQuery(orderHql);
 		orderQuery.setFirstResult((page - 1) * size).setMaxResults(size);
 		List<Order> orderList = orderQuery.list();
@@ -137,6 +139,42 @@ public class OrderService {
 		session.clear();
 		session.close();
 		return  result;
+	}
+
+	/**
+	 * 销售管理模块
+	 * @param time
+	 * @param goodNameOrUser
+	 * @return
+	 */
+	public String getAllManageOrderJson(String time, String goodNameOrUser) {
+		SimpleDateFormat  sdf = new SimpleDateFormat("yyyy-MM");
+		Session session = orderDAO.getSession();
+		Transaction transaction = session.beginTransaction();  //开启事物
+		Order order = new Order();
+		String[] times = null;
+		if (StringUtil.isNotNull(time)) {
+			//对时间进行分割
+		    times = time.split("-");
+		}
+		String hql = "from Order o where 1=1 " ;
+		//时间不相等的时候 添加条件
+		if (!times[0].equals(times[1])) {
+			hql += " and orderTime >= " + "'"+ChinaDateToDateUtil.parse(times[0])+ "'" + " and orderTime <= " +"'"+ChinaDateToDateUtil.parse(times[1])+ "-31" +"'";
+		}
+		if (StringUtil.isNotNull(goodNameOrUser)) {
+		   hql += " and ";	
+		}
+		Query orderQuery = orderDAO.getSession().createQuery(hql + " order by orderTime desc ");
+		ResponseObject result = null;
+		List<Order> list = orderQuery.list();
+		String  orderJson = new GsonBuilder().create().toJson(list);
+		System.out.println("-----------------------:" + hql + " order by orderTime desc " + "-----------json-----------" + list);
+		orderJson = "{" + "data:" + orderJson + "}";
+		//这里要进行sesson一级缓存的刷新和关闭
+		userDAO.getSession().flush();
+		userDAO.getSession().close();
+		return orderJson;
 	}
 
 	
